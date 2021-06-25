@@ -23,6 +23,9 @@ export async function getServerSideProps({ req, res }) {
 
   const resp = await fetch(`http://localhost:3000/api/ip`, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({ ip }),
   });
   const location = await resp.json();

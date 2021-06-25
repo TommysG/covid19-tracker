@@ -3,6 +3,8 @@
 export default async function handler(req, res) {
   const { ip } = req.body;
 
+  if (!ip) return res.status(404).json({ message: "IP field cannot be empty" });
+
   const response = await fetch(`http://ip-api.com/json/${ip}`);
   const data = await response.json();
 
