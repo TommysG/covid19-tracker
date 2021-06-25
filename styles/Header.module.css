@@ -22,13 +22,13 @@
   color: white;
 }
 
-.protect svg {
-  margin-right: 5px;
-}
-
 .protect .video {
   display: flex;
   align-items: center;
+}
+
+.protect .video svg {
+  margin-right: 5px;
 }
 
 .sickBtn {

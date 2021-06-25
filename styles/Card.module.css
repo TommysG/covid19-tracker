@@ -27,6 +27,8 @@
 
 .container .content h2 {
   font-size: 20px;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .container .firstRow {

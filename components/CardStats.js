@@ -24,7 +24,7 @@ function CardStats({
           </div>
 
           <div>
-            <h2 style={{ color: "#40B768" }}>{numberWithCommas(recovered)}</h2>
+            <h2 style={{ color: "#2dd164" }}>{numberWithCommas(recovered)}</h2>
             <span>Recovered</span>
           </div>
         </div>

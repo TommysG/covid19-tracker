@@ -9,6 +9,14 @@
 .container a {
   color: #666666;
   margin-left: 15px;
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.highlighting {
+  font-weight: 700;
 }
 
 /* .container img {

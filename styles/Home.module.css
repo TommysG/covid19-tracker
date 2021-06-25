@@ -59,6 +59,12 @@
   }
 }
 
+@media only screen and (max-width: 350px) {
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+  }
+}
+
 @media screen and (max-width: 1588px) and (min-width: 1215px) {
   .content {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));

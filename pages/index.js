@@ -1,18 +1,16 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Header from "../components/Header";
-import Map from "../components/Map";
-import DetailsItem from "../components/DetailsItem";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
 export default function Home({ location }) {
-  return <div>{/* <Loading /> */}</div>;
+  return (
+    <Head>
+      <title>Covid19 tracker</title>
+      <meta
+        name="description"
+        content="Tracking covid19 cases all over the world"
+      />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+  );
 }
 
 export async function getServerSideProps({ req, res }) {

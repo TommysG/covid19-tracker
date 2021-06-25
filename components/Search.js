@@ -33,9 +33,18 @@ function Search() {
   };
 
   const filteredCountries = results.filter(
-    (country) =>
-      country.country.toLowerCase().includes(text.toLowerCase()) || !text
+    (country) => {
+      const querySize = text.length;
+      const sliced = country.country.slice(0, querySize);
+
+      return sliced.toLowerCase().includes(text.toLowerCase()) || !text;
+    }
+    // country.country.toLowerCase().includes(text.toLowerCase()) || !text
   );
+
+  function escapeRegExp(string) {
+    return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&");
+  }
 
   return (
     <div className={styles.searchBox}>
@@ -89,6 +98,7 @@ function Search() {
                   img={country.countryInfo.flag}
                   name={country.country}
                   slug={country.countryInfo.iso2}
+                  query={text}
                 />
               );
             }
