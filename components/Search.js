@@ -103,7 +103,7 @@ function Search() {
               priority
             />
             <span className={styles.sorry}>
-              Sorry we couldn't find any matches for <span>{text}</span>
+              Sorry we couldn&apos;t find any matches for <span>{text}</span>
             </span>
             <span className={styles.try}>
               Please try searching for another country.
