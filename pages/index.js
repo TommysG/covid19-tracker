@@ -21,7 +21,7 @@ export async function getServerSideProps({ req, res }) {
     ? forwarded.split(/, /)[0]
     : req.connection.remoteAddress;
 
-  const resp = await fetch(`http://localhost:3000/api/ip`, {
+  const resp = await fetch(`${process.env.DOMAIN}/api/ip`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
