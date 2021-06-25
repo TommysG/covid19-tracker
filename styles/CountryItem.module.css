@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container a {
+  color: #666666;
+  margin-left: 15px;
+}
+
+/* .container img {
+  margin-right: 15px;
+} */
+
+.container:hover {
+  background-color: #f0f0f0;
+}
