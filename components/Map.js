@@ -51,6 +51,7 @@ const Map = ({ lat, long }) => {
                     key={geo.rsmKey}
                     geography={geo}
                     fill="#2A69EC"
+                    stroke="#2A69EC"
                     style={style}
                     onClick={() => {
                       if (!notListed.includes(geo.properties.ISO_A2)) {

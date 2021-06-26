@@ -15,7 +15,7 @@
 .details {
   flex: 0.25;
   margin: 0 auto;
-  padding: 25px 0px;
+  padding: 25px 20px;
 }
 
 .icon {
@@ -29,6 +29,7 @@
   color: white;
   display: flex;
   margin: 15px 15px 15px 0px;
+  align-items: center;
 }
 
 .country h2 {

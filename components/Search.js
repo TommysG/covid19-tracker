@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CountryItem from "./CountryItem";
 
-function Search() {
+function Search({ reference }) {
   const [text, setText] = useState("");
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState(false);

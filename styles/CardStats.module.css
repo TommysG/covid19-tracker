@@ -19,9 +19,14 @@
   color: white;
 }
 
+.content .header .iconBox {
+  display: flex;
+}
+
 .container .content {
   padding: 20px;
-  overflow-x: auto;
+  /* overflow-x: auto; */
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .container .firstRow {
@@ -40,6 +45,29 @@
   margin-bottom: 15px;
 }
 
+.slider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hidden {
+  position: absolute;
+  transform: translateX(-50%);
+  left: -50%;
+}
+
+.visible {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.statsBox {
+  width: 150px;
+}
+
 @media only screen and (max-width: 500px) {
   .container .firstRow {
     flex-direction: column;
@@ -47,5 +75,9 @@
 
   .container .secondRow {
     flex-direction: column;
+  }
+
+  .statsBox {
+    width: 100%;
   }
 }

@@ -22,20 +22,25 @@ import {
 
 function Country({ data, countries, all }) {
   const router = useRouter();
+
+  const mergedData = {
+    data,
+    all,
+  };
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Covid19 {router.query.id}</title>
+        <title>Covid19 {data.country}</title>
         <meta
           name="description"
           content="Tracking Covid19 cases all over the world"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {console.log(mergedData)}
       {/* HEADER */}
       <Header />
-
       {/* OVERVIEW */}
       <div className={styles.overview}>
         <Map lat={data.countryInfo.lat} long={data.countryInfo.long} />
@@ -47,7 +52,6 @@ function Country({ data, countries, all }) {
               width={50}
               height={33.4}
               alt="flag"
-              priority
             />
             <h2>{data.country}</h2>
           </div>
@@ -75,9 +79,7 @@ function Country({ data, countries, all }) {
           />
         </div>
       </div>
-
       {/* CONTENT DETAILS */}
-
       <Container maxWidth="xl">
         <div className={styles.content}>
           <CardCase
@@ -117,10 +119,12 @@ function Country({ data, countries, all }) {
             }
           />
           <CardStats
-            total={all.todayCases}
-            active={all.todayCases - all.todayRecovered - all.todayDeaths}
-            recovered={all.todayRecovered}
-            deaths={all.todayDeaths}
+            // total={all.todayCases}
+            // active={all.todayCases - all.todayRecovered - all.todayDeaths}
+            // recovered={all.todayRecovered}
+            // deaths={all.todayDeaths}
+            domestic={mergedData.data}
+            world={mergedData.all}
           />
           <CardStats
             title="WORLDWIDE STATISTICS"
@@ -128,6 +132,9 @@ function Country({ data, countries, all }) {
             active={all.active}
             recovered={all.recovered}
             deaths={all.deaths}
+            domestic={mergedData.data}
+            world={mergedData.all}
+            button={false}
           />
         </div>
 
