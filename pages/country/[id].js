@@ -38,7 +38,6 @@ function Country({ data, countries, all }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {console.log(mergedData)}
       {/* HEADER */}
       <Header />
       {/* OVERVIEW */}

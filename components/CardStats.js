@@ -17,8 +17,6 @@ function CardStats({
 }) {
   const [global, setGlobal] = useState(false);
 
-  console.log(world);
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
