@@ -54,8 +54,8 @@ const Map = ({ lat, long }) => {
                     stroke="#2A69EC"
                     style={style}
                     onClick={() => {
-                      if (!notListed.includes(geo.properties.ISO_A2)) {
-                        router.push(`/country/${geo.properties.ISO_A2}`);
+                      if (!notListed.includes(geo.properties['Alpha-2'])) {
+                        router.push(`/country/${geo.properties['Alpha-2']}`);
                       }
                     }}
                   />
