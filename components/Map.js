@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/Map.module.css";
 
 const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 const notListed = [
   "TV",
